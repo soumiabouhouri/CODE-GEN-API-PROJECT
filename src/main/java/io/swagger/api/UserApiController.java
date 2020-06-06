@@ -51,7 +51,7 @@ public class UserApiController implements UserApi {
             }
         }
 
-        return new ResponseEntity<User>(HttpStatus.NOT_IMPLEMENTED);
+        return new ResponseEntity<User>(HttpStatus.CREATED);
     }
 
     public ResponseEntity<User> deleteuserbyid(@ApiParam(value = "ID of article to retun",required=true) @PathVariable("id") Long id
@@ -66,7 +66,7 @@ public class UserApiController implements UserApi {
             }
         }
 
-        return new ResponseEntity<User>(HttpStatus.NOT_IMPLEMENTED);
+        return new ResponseEntity<User>(HttpStatus.OK);
     }
 
     public ResponseEntity<User> getuserbyid(@ApiParam(value = "ID of article to retun",required=true) @PathVariable("id") Long id
@@ -81,7 +81,7 @@ public class UserApiController implements UserApi {
             }
         }
 
-        return new ResponseEntity<User>(HttpStatus.NOT_IMPLEMENTED);
+        return new ResponseEntity<User>(HttpStatus.valueOf(200));
     }
 
     public ResponseEntity<List<User>> getusers(@ApiParam(value = "Filtering user by gender") @Valid @RequestParam(value = "filterGender", required = false) String filterGender
@@ -97,7 +97,7 @@ public class UserApiController implements UserApi {
             }
         }
 
-        return new ResponseEntity<List<User>>(HttpStatus.NOT_IMPLEMENTED);
+        return new ResponseEntity<List<User>>(HttpStatus.OK);
     }
 
     public ResponseEntity<InlineResponse200> login(@ApiParam(value = ""  )  @Valid @RequestBody User body
@@ -128,7 +128,7 @@ public class UserApiController implements UserApi {
             }
         }
 
-        return new ResponseEntity<User>(HttpStatus.NOT_IMPLEMENTED);
+        return new ResponseEntity<User>(HttpStatus.valueOf(200));
     }
 
 }
