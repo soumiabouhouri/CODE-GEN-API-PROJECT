@@ -7,6 +7,9 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
 import org.springframework.validation.annotation.Validated;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,7 +18,9 @@ import javax.validation.constraints.*;
  */
 @Validated
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-06-07T13:28:51.174Z[GMT]")
+@Entity
 public class User   {
+  @Id
   @JsonProperty("id")
   private String id = null;
 
@@ -43,9 +48,23 @@ public class User   {
   @JsonProperty("absoluteLimit")
   private Double absoluteLimit = null;
 
+
   public User id(String id) {
     this.id = id;
     return this;
+  }
+
+  public User(String id, String firstName, String lastName, String userName, String password,
+              String gender, BigDecimal dayLimimt, Double transactionLimit, Double absoluteLimit) {
+    this.id = id;
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.userName = userName;
+    this.password = password;
+    this.gender = gender;
+    this.dayLimimt = dayLimimt;
+    this.transactionLimit = transactionLimit;
+    this.absoluteLimit = absoluteLimit;
   }
 
   /**
