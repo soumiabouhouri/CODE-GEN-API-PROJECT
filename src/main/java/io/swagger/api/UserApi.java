@@ -30,7 +30,7 @@ public interface UserApi {
 
     @ApiOperation(value = "Create new user", nickname = "createuser", notes = "Calling this allows you to create an user", response = User.class, tags={ "Users", })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "create user", response = User.class),
+        @ApiResponse(code = 201, message = "create user", response = User.class),
         @ApiResponse(code = 400, message = "bad input parameter") })
     @RequestMapping(value = "/User/register",
         produces = { "application/json" }, 
