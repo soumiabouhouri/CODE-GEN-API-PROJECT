@@ -54,6 +54,9 @@ public class User   {
     return this;
   }
 
+  public User() {
+  }
+
   public User(String id, String firstName, String lastName, String userName, String password,
               String gender, BigDecimal dayLimimt, Double transactionLimit, Double absoluteLimit) {
     this.id = id;

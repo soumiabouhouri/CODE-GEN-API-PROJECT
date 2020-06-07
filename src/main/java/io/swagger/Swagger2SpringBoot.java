@@ -2,6 +2,7 @@ package io.swagger;
 
 import io.swagger.model.User;
 import io.swagger.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.ExitCodeGenerator;
 import org.springframework.boot.SpringApplication;
@@ -19,6 +20,7 @@ import java.util.List;
 @ComponentScan(basePackages = { "io.swagger", "io.swagger.api" , "io.swagger.configuration"})
 public class Swagger2SpringBoot implements CommandLineRunner {
 
+    @Autowired
     UserRepository userRepository;
     @Override
     public void run(String... arg0) throws Exception {
