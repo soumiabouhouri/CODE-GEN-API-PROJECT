@@ -4,8 +4,10 @@ import io.swagger.model.InlineResponse200;
 import io.swagger.model.User;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.swagger.annotations.*;
+import io.swagger.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -26,6 +28,9 @@ import java.util.Map;
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-06-07T13:28:51.174Z[GMT]")
 @Controller
 public class UserApiController implements UserApi {
+
+    @Autowired
+    UserService userService;
 
     private static final Logger log = LoggerFactory.getLogger(UserApiController.class);
 

@@ -26,6 +26,10 @@ public class Account extends User  {
   @JsonProperty("Balance")
   private BigDecimal balance = null;
 
+  public Account(String id, String firstName, String lastName, String userName, String password, String gender, BigDecimal dayLimimt, Double transactionLimit, Double absoluteLimit) {
+    super(id, firstName, lastName, userName, password, gender, dayLimimt, transactionLimit, absoluteLimit);
+  }
+
   public Account IBAN(String IBAN) {
     this.IBAN = IBAN;
     return this;

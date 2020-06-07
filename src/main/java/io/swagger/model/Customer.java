@@ -24,6 +24,10 @@ public class Customer extends User  {
   @Valid
   private List<Account> account = new ArrayList<Account>();
 
+  public Customer(String id, String firstName, String lastName, String userName, String password, String gender, BigDecimal dayLimimt, Double transactionLimit, Double absoluteLimit) {
+    super(id, firstName, lastName, userName, password, gender, dayLimimt, transactionLimit, absoluteLimit);
+  }
+
   public Customer account(List<Account> account) {
     this.account = account;
     return this;
