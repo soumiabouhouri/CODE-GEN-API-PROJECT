@@ -21,7 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d1c62de1-4c19-405d-9251-0b73f435c5ef" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-spring.iml" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-spring.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,11 +38,8 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Application.Swagger2SpringBoot">
+  <component name="RunManager">
     <configuration name="Swagger2SpringBoot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="io.swagger.Swagger2SpringBoot" />
       <module name="swagger-spring" />
@@ -53,13 +49,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Swagger2SpringBoot" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="swagger-spring" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="io.swagger.Swagger2SpringBoot" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -80,12 +69,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1591537150895</updated>
-      <workItem from="1591540036108" duration="388000" />
     </task>
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -99,9 +84,9 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="578" y="316" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591540121691">
-      <screen x="0" y="0" width="1536" height="804" />
+    <state x="489" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591541473344">
+      <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="578" y="316" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.804@0.0.1536.804" timestamp="1591540121691" />
+    <state x="489" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1360.728@0.0.1360.728" timestamp="1591541473344" />
   </component>
 </project>
