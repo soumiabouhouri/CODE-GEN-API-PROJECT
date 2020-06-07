@@ -15,7 +15,7 @@ import javax.validation.constraints.*;
  * Account
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-06-05T07:18:09.974Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-06-07T13:28:51.174Z[GMT]")
 public class Account extends User  {
   @JsonProperty("IBAN")
   private String IBAN = null;
@@ -37,7 +37,7 @@ public class Account extends User  {
   **/
   @ApiModelProperty(example = "NLxxINHO0000000000", value = "")
   
-  @Pattern(regexp="^[NL]\\d{2}[INHO][1-9]")   public String getIBAN() {
+    public String getIBAN() {
     return IBAN;
   }
 

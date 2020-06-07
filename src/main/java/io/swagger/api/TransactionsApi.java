@@ -23,7 +23,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-06-05T07:18:09.974Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-06-07T13:28:51.174Z[GMT]")
 @Api(value = "Transactions", description = "the Transactions API")
 public interface TransactionsApi {
 
@@ -48,14 +48,15 @@ public interface TransactionsApi {
 );
 
 
-    @ApiOperation(value = "Perform a transfer", nickname = "transfer", notes = "Make a transfer between accounts", tags={ "Transactions", })
+    @ApiOperation(value = "Perform a transfer", nickname = "transfer", notes = "Make a transfer between accounts", response = Transaction.class, tags={ "Transactions", })
     @ApiResponses(value = { 
-        @ApiResponse(code = 201, message = "Successful transfer"),
+        @ApiResponse(code = 201, message = "Successful transfer", response = Transaction.class),
         @ApiResponse(code = 400, message = "Transfer failed") })
     @RequestMapping(value = "/Transactions/",
+        produces = { "application/json" }, 
         consumes = { "application/json" },
         method = RequestMethod.POST)
-    ResponseEntity<Void> transfer(@ApiParam(value = "transaction for the transfer"  )  @Valid @RequestBody Transaction body
+    ResponseEntity<Transaction> transfer(@ApiParam(value = "transaction for the transfer"  )  @Valid @RequestBody Transaction body
 );
 
 }

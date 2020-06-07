@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.math.BigDecimal;
 import org.threeten.bp.OffsetDateTime;
 import org.springframework.validation.annotation.Validated;
 import javax.validation.Valid;
@@ -15,7 +14,7 @@ import javax.validation.constraints.*;
  * Transaction
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-06-05T07:18:09.974Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-06-07T13:28:51.174Z[GMT]")
 public class Transaction   {
   @JsonProperty("id")
   private Integer id = null;
@@ -34,15 +33,6 @@ public class Transaction   {
 
   @JsonProperty("amount")
   private Double amount = null;
-
-  @JsonProperty("absoluteLimit")
-  private Double absoluteLimit = null;
-
-  @JsonProperty("dayLimimt")
-  private BigDecimal dayLimimt = null;
-
-  @JsonProperty("transactionLimit")
-  private Double transactionLimit = null;
 
   public Transaction id(Integer id) {
     this.id = id;
@@ -164,64 +154,6 @@ public class Transaction   {
     this.amount = amount;
   }
 
-  public Transaction absoluteLimit(Double absoluteLimit) {
-    this.absoluteLimit = absoluteLimit;
-    return this;
-  }
-
-  /**
-   * Get absoluteLimit
-   * @return absoluteLimit
-  **/
-  @ApiModelProperty(example = "100", value = "")
-  
-    public Double getAbsoluteLimit() {
-    return absoluteLimit;
-  }
-
-  public void setAbsoluteLimit(Double absoluteLimit) {
-    this.absoluteLimit = absoluteLimit;
-  }
-
-  public Transaction dayLimimt(BigDecimal dayLimimt) {
-    this.dayLimimt = dayLimimt;
-    return this;
-  }
-
-  /**
-   * Get dayLimimt
-   * @return dayLimimt
-  **/
-  @ApiModelProperty(example = "15", value = "")
-  
-    @Valid
-    public BigDecimal getDayLimimt() {
-    return dayLimimt;
-  }
-
-  public void setDayLimimt(BigDecimal dayLimimt) {
-    this.dayLimimt = dayLimimt;
-  }
-
-  public Transaction transactionLimit(Double transactionLimit) {
-    this.transactionLimit = transactionLimit;
-    return this;
-  }
-
-  /**
-   * Get transactionLimit
-   * @return transactionLimit
-  **/
-  @ApiModelProperty(example = "10000", value = "")
-  
-    public Double getTransactionLimit() {
-    return transactionLimit;
-  }
-
-  public void setTransactionLimit(Double transactionLimit) {
-    this.transactionLimit = transactionLimit;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -237,15 +169,12 @@ public class Transaction   {
         Objects.equals(this.userAccount, transaction.userAccount) &&
         Objects.equals(this.receiverAccount, transaction.receiverAccount) &&
         Objects.equals(this.user, transaction.user) &&
-        Objects.equals(this.amount, transaction.amount) &&
-        Objects.equals(this.absoluteLimit, transaction.absoluteLimit) &&
-        Objects.equals(this.dayLimimt, transaction.dayLimimt) &&
-        Objects.equals(this.transactionLimit, transaction.transactionLimit);
+        Objects.equals(this.amount, transaction.amount);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, timestamp, userAccount, receiverAccount, user, amount, absoluteLimit, dayLimimt, transactionLimit);
+    return Objects.hash(id, timestamp, userAccount, receiverAccount, user, amount);
   }
 
   @Override
@@ -259,9 +188,6 @@ public class Transaction   {
     sb.append("    receiverAccount: ").append(toIndentedString(receiverAccount)).append("\n");
     sb.append("    user: ").append(toIndentedString(user)).append("\n");
     sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
-    sb.append("    absoluteLimit: ").append(toIndentedString(absoluteLimit)).append("\n");
-    sb.append("    dayLimimt: ").append(toIndentedString(dayLimimt)).append("\n");
-    sb.append("    transactionLimit: ").append(toIndentedString(transactionLimit)).append("\n");
     sb.append("}");
     return sb.toString();
   }

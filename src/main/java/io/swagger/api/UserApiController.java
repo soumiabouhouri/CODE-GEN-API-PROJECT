@@ -23,7 +23,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-06-05T07:18:09.974Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-06-07T13:28:51.174Z[GMT]")
 @Controller
 public class UserApiController implements UserApi {
 
@@ -44,14 +44,14 @@ public class UserApiController implements UserApi {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("application/json")) {
             try {
-                return new ResponseEntity<User>(objectMapper.readValue("{\n  \"UserName\" : \"johndoe\",\n  \"FirstName\" : \"John\",\n  \"id\" : \"1L3\",\n  \"LastName\" : \"Doe\",\n  \"Gender\" : \"Male\",\n  \"Password\" : \"password\"\n}", User.class), HttpStatus.NOT_IMPLEMENTED);
+                return new ResponseEntity<User>(objectMapper.readValue("{\n  \"UserName\" : \"johndoe\",\n  \"absoluteLimit\" : 100,\n  \"FirstName\" : \"John\",\n  \"dayLimimt\" : 15,\n  \"id\" : \"1L3\",\n  \"LastName\" : \"Doe\",\n  \"Gender\" : \"Male\",\n  \"transactionLimit\" : 10000,\n  \"Password\" : \"password\"\n}", User.class), HttpStatus.NOT_IMPLEMENTED);
             } catch (IOException e) {
                 log.error("Couldn't serialize response for content type application/json", e);
                 return new ResponseEntity<User>(HttpStatus.INTERNAL_SERVER_ERROR);
             }
         }
 
-        return new ResponseEntity<User>(HttpStatus.CREATED);
+        return new ResponseEntity<User>(HttpStatus.NOT_IMPLEMENTED);
     }
 
     public ResponseEntity<User> deleteuserbyid(@ApiParam(value = "ID of article to retun",required=true) @PathVariable("id") Long id
@@ -59,14 +59,14 @@ public class UserApiController implements UserApi {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("application/json")) {
             try {
-                return new ResponseEntity<User>(objectMapper.readValue("{\n  \"UserName\" : \"johndoe\",\n  \"FirstName\" : \"John\",\n  \"id\" : \"1L3\",\n  \"LastName\" : \"Doe\",\n  \"Gender\" : \"Male\",\n  \"Password\" : \"password\"\n}", User.class), HttpStatus.NOT_IMPLEMENTED);
+                return new ResponseEntity<User>(objectMapper.readValue("{\n  \"UserName\" : \"johndoe\",\n  \"absoluteLimit\" : 100,\n  \"FirstName\" : \"John\",\n  \"dayLimimt\" : 15,\n  \"id\" : \"1L3\",\n  \"LastName\" : \"Doe\",\n  \"Gender\" : \"Male\",\n  \"transactionLimit\" : 10000,\n  \"Password\" : \"password\"\n}", User.class), HttpStatus.NOT_IMPLEMENTED);
             } catch (IOException e) {
                 log.error("Couldn't serialize response for content type application/json", e);
                 return new ResponseEntity<User>(HttpStatus.INTERNAL_SERVER_ERROR);
             }
         }
 
-        return new ResponseEntity<User>(HttpStatus.OK);
+        return new ResponseEntity<User>(HttpStatus.NOT_IMPLEMENTED);
     }
 
     public ResponseEntity<User> getuserbyid(@ApiParam(value = "ID of article to retun",required=true) @PathVariable("id") Long id
@@ -74,14 +74,14 @@ public class UserApiController implements UserApi {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("application/json")) {
             try {
-                return new ResponseEntity<User>(objectMapper.readValue("{\n  \"UserName\" : \"johndoe\",\n  \"FirstName\" : \"John\",\n  \"id\" : \"1L3\",\n  \"LastName\" : \"Doe\",\n  \"Gender\" : \"Male\",\n  \"Password\" : \"password\"\n}", User.class), HttpStatus.NOT_IMPLEMENTED);
+                return new ResponseEntity<User>(objectMapper.readValue("{\n  \"UserName\" : \"johndoe\",\n  \"absoluteLimit\" : 100,\n  \"FirstName\" : \"John\",\n  \"dayLimimt\" : 15,\n  \"id\" : \"1L3\",\n  \"LastName\" : \"Doe\",\n  \"Gender\" : \"Male\",\n  \"transactionLimit\" : 10000,\n  \"Password\" : \"password\"\n}", User.class), HttpStatus.NOT_IMPLEMENTED);
             } catch (IOException e) {
                 log.error("Couldn't serialize response for content type application/json", e);
                 return new ResponseEntity<User>(HttpStatus.INTERNAL_SERVER_ERROR);
             }
         }
 
-        return new ResponseEntity<User>(HttpStatus.valueOf(200));
+        return new ResponseEntity<User>(HttpStatus.NOT_IMPLEMENTED);
     }
 
     public ResponseEntity<List<User>> getusers(@ApiParam(value = "Filtering user by gender") @Valid @RequestParam(value = "filterGender", required = false) String filterGender
@@ -90,14 +90,14 @@ public class UserApiController implements UserApi {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("application/json")) {
             try {
-                return new ResponseEntity<List<User>>(objectMapper.readValue("[ {\n  \"UserName\" : \"johndoe\",\n  \"FirstName\" : \"John\",\n  \"id\" : \"1L3\",\n  \"LastName\" : \"Doe\",\n  \"Gender\" : \"Male\",\n  \"Password\" : \"password\"\n}, {\n  \"UserName\" : \"johndoe\",\n  \"FirstName\" : \"John\",\n  \"id\" : \"1L3\",\n  \"LastName\" : \"Doe\",\n  \"Gender\" : \"Male\",\n  \"Password\" : \"password\"\n} ]", List.class), HttpStatus.NOT_IMPLEMENTED);
+                return new ResponseEntity<List<User>>(objectMapper.readValue("[ {\n  \"UserName\" : \"johndoe\",\n  \"absoluteLimit\" : 100,\n  \"FirstName\" : \"John\",\n  \"dayLimimt\" : 15,\n  \"id\" : \"1L3\",\n  \"LastName\" : \"Doe\",\n  \"Gender\" : \"Male\",\n  \"transactionLimit\" : 10000,\n  \"Password\" : \"password\"\n}, {\n  \"UserName\" : \"johndoe\",\n  \"absoluteLimit\" : 100,\n  \"FirstName\" : \"John\",\n  \"dayLimimt\" : 15,\n  \"id\" : \"1L3\",\n  \"LastName\" : \"Doe\",\n  \"Gender\" : \"Male\",\n  \"transactionLimit\" : 10000,\n  \"Password\" : \"password\"\n} ]", List.class), HttpStatus.NOT_IMPLEMENTED);
             } catch (IOException e) {
                 log.error("Couldn't serialize response for content type application/json", e);
                 return new ResponseEntity<List<User>>(HttpStatus.INTERNAL_SERVER_ERROR);
             }
         }
 
-        return new ResponseEntity<List<User>>(HttpStatus.OK);
+        return new ResponseEntity<List<User>>(HttpStatus.NOT_IMPLEMENTED);
     }
 
     public ResponseEntity<InlineResponse200> login(@ApiParam(value = ""  )  @Valid @RequestBody User body
@@ -121,14 +121,14 @@ public class UserApiController implements UserApi {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("application/json")) {
             try {
-                return new ResponseEntity<User>(objectMapper.readValue("{\n  \"UserName\" : \"johndoe\",\n  \"FirstName\" : \"John\",\n  \"id\" : \"1L3\",\n  \"LastName\" : \"Doe\",\n  \"Gender\" : \"Male\",\n  \"Password\" : \"password\"\n}", User.class), HttpStatus.NOT_IMPLEMENTED);
+                return new ResponseEntity<User>(objectMapper.readValue("{\n  \"UserName\" : \"johndoe\",\n  \"absoluteLimit\" : 100,\n  \"FirstName\" : \"John\",\n  \"dayLimimt\" : 15,\n  \"id\" : \"1L3\",\n  \"LastName\" : \"Doe\",\n  \"Gender\" : \"Male\",\n  \"transactionLimit\" : 10000,\n  \"Password\" : \"password\"\n}", User.class), HttpStatus.NOT_IMPLEMENTED);
             } catch (IOException e) {
                 log.error("Couldn't serialize response for content type application/json", e);
                 return new ResponseEntity<User>(HttpStatus.INTERNAL_SERVER_ERROR);
             }
         }
 
-        return new ResponseEntity<User>(HttpStatus.valueOf(200));
+        return new ResponseEntity<User>(HttpStatus.NOT_IMPLEMENTED);
     }
 
 }

@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.math.BigDecimal;
 import org.springframework.validation.annotation.Validated;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
@@ -13,7 +14,7 @@ import javax.validation.constraints.*;
  * User
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-06-05T07:18:09.974Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-06-07T13:28:51.174Z[GMT]")
 public class User   {
   @JsonProperty("id")
   private String id = null;
@@ -32,6 +33,15 @@ public class User   {
 
   @JsonProperty("Gender")
   private String gender = null;
+
+  @JsonProperty("dayLimimt")
+  private BigDecimal dayLimimt = null;
+
+  @JsonProperty("transactionLimit")
+  private Double transactionLimit = null;
+
+  @JsonProperty("absoluteLimit")
+  private Double absoluteLimit = null;
 
   public User id(String id) {
     this.id = id;
@@ -150,6 +160,64 @@ public class User   {
     this.gender = gender;
   }
 
+  public User dayLimimt(BigDecimal dayLimimt) {
+    this.dayLimimt = dayLimimt;
+    return this;
+  }
+
+  /**
+   * Get dayLimimt
+   * @return dayLimimt
+  **/
+  @ApiModelProperty(example = "15", value = "")
+  
+    @Valid
+    public BigDecimal getDayLimimt() {
+    return dayLimimt;
+  }
+
+  public void setDayLimimt(BigDecimal dayLimimt) {
+    this.dayLimimt = dayLimimt;
+  }
+
+  public User transactionLimit(Double transactionLimit) {
+    this.transactionLimit = transactionLimit;
+    return this;
+  }
+
+  /**
+   * Get transactionLimit
+   * @return transactionLimit
+  **/
+  @ApiModelProperty(example = "10000", value = "")
+  
+    public Double getTransactionLimit() {
+    return transactionLimit;
+  }
+
+  public void setTransactionLimit(Double transactionLimit) {
+    this.transactionLimit = transactionLimit;
+  }
+
+  public User absoluteLimit(Double absoluteLimit) {
+    this.absoluteLimit = absoluteLimit;
+    return this;
+  }
+
+  /**
+   * Get absoluteLimit
+   * @return absoluteLimit
+  **/
+  @ApiModelProperty(example = "100", value = "")
+  
+    public Double getAbsoluteLimit() {
+    return absoluteLimit;
+  }
+
+  public void setAbsoluteLimit(Double absoluteLimit) {
+    this.absoluteLimit = absoluteLimit;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -165,12 +233,15 @@ public class User   {
         Objects.equals(this.lastName, user.lastName) &&
         Objects.equals(this.userName, user.userName) &&
         Objects.equals(this.password, user.password) &&
-        Objects.equals(this.gender, user.gender);
+        Objects.equals(this.gender, user.gender) &&
+        Objects.equals(this.dayLimimt, user.dayLimimt) &&
+        Objects.equals(this.transactionLimit, user.transactionLimit) &&
+        Objects.equals(this.absoluteLimit, user.absoluteLimit);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, firstName, lastName, userName, password, gender);
+    return Objects.hash(id, firstName, lastName, userName, password, gender, dayLimimt, transactionLimit, absoluteLimit);
   }
 
   @Override
@@ -184,6 +255,9 @@ public class User   {
     sb.append("    userName: ").append(toIndentedString(userName)).append("\n");
     sb.append("    password: ").append(toIndentedString(password)).append("\n");
     sb.append("    gender: ").append(toIndentedString(gender)).append("\n");
+    sb.append("    dayLimimt: ").append(toIndentedString(dayLimimt)).append("\n");
+    sb.append("    transactionLimit: ").append(toIndentedString(transactionLimit)).append("\n");
+    sb.append("    absoluteLimit: ").append(toIndentedString(absoluteLimit)).append("\n");
     sb.append("}");
     return sb.toString();
   }
